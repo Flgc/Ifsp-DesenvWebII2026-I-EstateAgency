@@ -1,0 +1,23 @@
+<div class="container">
+    <header>
+        <h1>REAL ESTATE AGENCY SPECIALIZING IN CONDOMINIUMS</h1>
+        <p>Let me help yoy find the home of your of your dreams...</p>
+    </header>
+
+
+    <h2>Featured Properties</h2>
+    <div class="businessCard">
+        @for(item of home; track item.id)
+        {
+        <img [src]="item.photo" alt="{{item.title}}">
+        <br>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description}}</p>
+        <button (click)="moreDetails(item)">View details</button>
+        <br><br><br>
+        }
+    </div>
+    <footer>
+        <p>2026 Imobb Indaiatuba - All rights reserved</p>
+    </footer>
+</div>
